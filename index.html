@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nayana AI Assistant - Natural Remedies</title>
-    <meta name="description" content="Ask Nayana - Your intelligent AI assistant for Natural Remedies. Get instant answers about products, strategy, and more.">
+    <title>ROMi AI Avatar - Natural Remedies</title>
+    <meta name="description" content="Meet ROMi - Your AI-powered avatar assistant for Natural Remedies. Interact with our intelligent avatar to learn about products, research, and more.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -215,10 +215,6 @@
             box-shadow: 0 6px 16px rgba(26, 95, 58, 0.15);
         }
         
-        .question-card:hover .click-indicator {
-            opacity: 1;
-        }
-        
         .question-number {
             font-size: 0.75rem;
             font-weight: 700;
@@ -252,17 +248,6 @@
         .category-campaign { background: rgba(90, 122, 104, 0.1); color: var(--primary-forest-light); }
         .category-digital { background: rgba(217, 121, 23, 0.15); color: #b85f0a; }
         .category-roi { background: rgba(3, 105, 161, 0.15); color: #075985; }
-        
-        .click-indicator {
-            position: absolute;
-            bottom: 0.5rem;
-            right: 0.75rem;
-            font-size: 0.7rem;
-            color: var(--primary-forest);
-            opacity: 0;
-            transition: opacity 0.3s;
-            font-weight: 600;
-        }
         
         /* ===== FOOTER CTA ===== */
         .footer-cta {
@@ -411,7 +396,7 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo-container">
-                    <img src="data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABkAAD/4QMraHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjMtYzAxMSA2Ni4xNDU2NjEsIDIwMTIvMDIvMDYtMTQ6NTY6MjcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzYgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjdDM0FEQUQxRUFFRDExRjA5NzkzOUFCMzNCRjE2RUFDIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjdDM0FEQUQyRUFFRDExRjA5NzkzOUFCMzNCRjE2RUFDIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6N0MzQURBQ0ZFQUVEMTFGMDk3OTM5QUIzM0JGMTZFQUMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6N0MzQURBRDBFQUVEMTFGMDk3OTM5QUIzM0JGMTZFQUMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAOQWRvYmUAZMAAAAAB/9sAhAABAQEBAQEBAQEBAQEBAQEBAQEB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" alt="Natural Remedies" class="logo-img" />
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJ3aGl0ZSIvPgo8IS0tIEJsdWUgcGhvbmUgY3VydmUgLS0+CjxwYXRoIGQ9Ik0yMCA0NUMyMCAzNSAyNSAyNSAzNSAyNUM0NSAyNSA1NSAzNSA1NSA0NUM1NSA1NSA0NSA2NSAzNSA2NSIgc3Ryb2tlPSIjMDA2NkNDIiBzdHJva2Utd2lkdGg9IjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPgo8IS0tIEJsdWUgZG90IC0tPgo8Y2lyY2xlIGN4PSI0OCIgY3k9IjMyIiByPSI2IiBmaWxsPSIjMDA2NkNDIi8+CjwhLS0gWWVsbG93IGhlYXJ0IC0tPgo8Y2lyY2xlIGN4PSI0NSIgY3k9IjUwIiByPSI1IiBmaWxsPSIjRkZDQzAwIi8+CjwhLS0gT3JhbmdlIGhlYXJ0IC0tPgo8Y2lyY2xlIGN4PSI1MyIgY3k9IjUyIiByPSI2IiBmaWxsPSIjRkY2NjAwIi8+CjwhLS0gR3JlZW4gc21pbGUgY3VydmUgLS0+CjxwYXRoIGQ9Ik01NSA2NUM2NSA2NSA3NSA2MCA4MCA1MEM4NSA0MCA4MCAzMCA3MCAzMCIgc3Ryb2tlPSIjNjY5OTMzIiBzdHJva2Utd2lkdGg9IjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPgo8IS0tIEdyZWVuIGRvdCAtLT4KPGNpcmNsZSBjeD0iNzAiIGN5PSI0MiIgcj0iNiIgZmlsbD0iIzY2OTkzMyIvPgo8IS0tIFRleHQgLS0+Cjx0ZXh0IHg9IjUwIiB5PSI5MCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjIwIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzY2OTkzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSI+bmF0dXJhbDwvdGV4dD4KPC9zdmc+" alt="Natural Remedies" class="logo-img" />
                 </div>
                 <div class="header-text">
                     <h1 class="company-name">Natural Remedies</h1>
@@ -424,13 +409,13 @@
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="container">
-            <h2 class="hero-title">Meet <span class="highlight">Nayana</span> — Your AI Assistant</h2>
+            <h2 class="hero-title">Meet <span class="highlight">ROMi</span> — Your AI Avatar</h2>
             <p class="hero-subtitle">
-                Click any question below to start a conversation with Nayana, Natural Remedies' intelligent AI assistant trained on our products, strategy, and expertise.
+                Click any question below to interact with ROMi, Natural Remedies' intelligent AI-powered avatar trained on our products, strategy, and expertise.
             </p>
             <div class="ai-badge">
                 <span>✨</span>
-                <span>Powered by Advanced AI</span>
+                <span>Interactive AI Avatar Technology</span>
             </div>
         </div>
     </section>
@@ -440,7 +425,7 @@
         <div class="container">
             <div class="section-header">
                 <h3 class="section-title">Explore Popular Questions</h3>
-                <p class="section-description">Click any card to ask Nayana — instant, intelligent answers await</p>
+                <p class="section-description">Click any card to ask ROMi via our interactive avatar</p>
             </div>
             
             <div class="questions-grid">
@@ -449,15 +434,13 @@
                     <div class="question-number">QUESTION 1</div>
                     <div class="question-text">What are the future growth plans for Doodhsagaar?</div>
                     <span class="question-category category-product">Product Strategy</span>
-                    <span class="click-indicator">Click to ask →</span>
                 </div>
 
                 <!-- Question 2 -->
                 <div class="question-card" onclick="askQuestion(this)">
                     <div class="question-number">QUESTION 2</div>
-                    <div class="question-text">Why is Glucaboost #2 in the calcium market despite being in that position for long?</div>
+                    <div class="question-text">Why is Glucaboost No2 position in the energy segment despite being in that position for long?</div>
                     <span class="question-category category-product">Market Position</span>
-                    <span class="click-indicator">Click to ask →</span>
                 </div>
 
                 <!-- Question 3 -->
@@ -465,7 +448,6 @@
                     <div class="question-number">QUESTION 3</div>
                     <div class="question-text">How has Topicure managed to remain the category leader for such a long time?</div>
                     <span class="question-category category-brand">Brand Leadership</span>
-                    <span class="click-indicator">Click to ask →</span>
                 </div>
 
                 <!-- Question 4 -->
@@ -473,7 +455,6 @@
                     <div class="question-number">QUESTION 4</div>
                     <div class="question-text">Why is the CEO not very visible on LinkedIn in terms of regular posts and thoughts?</div>
                     <span class="question-category category-brand">Leadership</span>
-                    <span class="click-indicator">Click to ask →</span>
                 </div>
 
                 <!-- Question 5 -->
@@ -481,7 +462,6 @@
                     <div class="question-number">QUESTION 5</div>
                     <div class="question-text">How do we keep our employees internally engaged?</div>
                     <span class="question-category category-brand">Culture</span>
-                    <span class="click-indicator">Click to ask →</span>
                 </div>
 
                 <!-- Question 6 -->
@@ -489,7 +469,6 @@
                     <div class="question-number">QUESTION 6</div>
                     <div class="question-text">How are we building credibility and brand awareness in the market?</div>
                     <span class="question-category category-brand">Brand Strategy</span>
-                    <span class="click-indicator">Click to ask →</span>
                 </div>
 
                 <!-- Question 7 -->
@@ -497,7 +476,6 @@
                     <div class="question-number">QUESTION 7</div>
                     <div class="question-text">What's the visibility of Natural Remedies in the media landscape and in terms of thought leadership?</div>
                     <span class="question-category category-brand">Media Presence</span>
-                    <span class="click-indicator">Click to ask →</span>
                 </div>
 
                 <!-- Question 8 -->
@@ -505,7 +483,6 @@
                     <div class="question-number">QUESTION 8</div>
                     <div class="question-text">How many awards and recognitions have we won in the last couple of years?</div>
                     <span class="question-category category-brand">Recognition</span>
-                    <span class="click-indicator">Click to ask →</span>
                 </div>
 
                 <!-- Question 9 -->
@@ -513,7 +490,6 @@
                     <div class="question-number">QUESTION 9</div>
                     <div class="question-text">What's the visibility on social media and what kind of impact have we seen in the last couple of years?</div>
                     <span class="question-category category-social">Social Media</span>
-                    <span class="click-indicator">Click to ask →</span>
                 </div>
 
                 <!-- Question 10 -->
@@ -521,7 +497,6 @@
                     <div class="question-number">QUESTION 10</div>
                     <div class="question-text">How many pieces of content do we create in a year and what kind of impact do we see?</div>
                     <span class="question-category category-social">Content Creation</span>
-                    <span class="click-indicator">Click to ask →</span>
                 </div>
 
                 <!-- Question 11 -->
@@ -529,7 +504,6 @@
                     <div class="question-number">QUESTION 11</div>
                     <div class="question-text">How many LinkedIn followers do we have across the globe?</div>
                     <span class="question-category category-social">Social Reach</span>
-                    <span class="click-indicator">Click to ask →</span>
                 </div>
 
                 <!-- Question 12 -->
@@ -537,7 +511,6 @@
                     <div class="question-number">QUESTION 12</div>
                     <div class="question-text">With regards to digital marketing, what do we do in India versus globally?</div>
                     <span class="question-category category-digital">Digital Strategy</span>
-                    <span class="click-indicator">Click to ask →</span>
                 </div>
 
                 <!-- Question 13 -->
@@ -545,7 +518,6 @@
                     <div class="question-number">QUESTION 13</div>
                     <div class="question-text">Why have we run 172 campaigns? Is that too many, and what's the impact?</div>
                     <span class="question-category category-campaign">Campaign Volume</span>
-                    <span class="click-indicator">Click to ask →</span>
                 </div>
 
                 <!-- Question 14 -->
@@ -553,7 +525,6 @@
                     <div class="question-number">QUESTION 14</div>
                     <div class="question-text">What's the overall performance of our website in the last couple of years?</div>
                     <span class="question-category category-digital">Web Analytics</span>
-                    <span class="click-indicator">Click to ask →</span>
                 </div>
 
                 <!-- Question 15 -->
@@ -561,7 +532,6 @@
                     <div class="question-number">QUESTION 15</div>
                     <div class="question-text">What has the marketing team done for monogastrics in the last couple of years?</div>
                     <span class="question-category category-campaign">Segment Focus</span>
-                    <span class="click-indicator">Click to ask →</span>
                 </div>
 
                 <!-- Question 16 -->
@@ -569,7 +539,6 @@
                     <div class="question-number">QUESTION 16</div>
                     <div class="question-text">Have we quantified the business impact of the Phytocee campaign at a single venue?</div>
                     <span class="question-category category-roi">Campaign ROI</span>
-                    <span class="click-indicator">Click to ask →</span>
                 </div>
 
                 <!-- Question 17 -->
@@ -577,7 +546,6 @@
                     <div class="question-number">QUESTION 17</div>
                     <div class="question-text">What kind of industry events have we done and what's the impact?</div>
                     <span class="question-category category-campaign">Events</span>
-                    <span class="click-indicator">Click to ask →</span>
                 </div>
 
                 <!-- Question 18 -->
@@ -585,7 +553,6 @@
                     <div class="question-number">QUESTION 18</div>
                     <div class="question-text">What's the story behind "Choline Reinvented" for Kolin Plus and the impact?</div>
                     <span class="question-category category-campaign">Campaign Story</span>
-                    <span class="click-indicator">Click to ask →</span>
                 </div>
             </div>
         </div>
@@ -594,11 +561,11 @@
     <!-- FOOTER CTA -->
     <section class="footer-cta">
         <div class="container">
-            <h3 class="cta-title">Ready to Learn More?</h3>
-            <p class="cta-text">Ask Nayana anything about Natural Remedies</p>
+            <h3 class="cta-title">Ready to Meet ROMi?</h3>
+            <p class="cta-text">Interact with our AI-powered avatar assistant</p>
             <button class="cta-button" onclick="openChat()">
-                <span>💬</span>
-                <span>Start Chatting Now</span>
+                <span>🎥</span>
+                <span>Talk to ROMi Now</span>
             </button>
         </div>
     </section>
@@ -609,19 +576,17 @@
             <div class="footer-content">
                 <span>&copy; 2026 Natural Remedies. All rights reserved.</span>
                 <span>•</span>
-                <span>Powered by <a href="https://thynkwise.co.in" target="_blank">ThynkWise AI</a></span>
+                <span>Avatar powered by <a href="https://www.heygen.com" target="_blank">HeyGen</a></span>
             </div>
         </div>
     </footer>
 
-    <script>!function(window){const host="https://labs.heygen.com",url=host+"/guest/streaming-embed?share=eyJxdWFsaXR5IjoiaGlnaCIsImF2YXRhck5hbWUiOiJNYXJpYW5uZV9DaGFpcl9TaXR0aW5nX3B1%0D%0AYmxpYyIsInByZXZpZXdJbWciOiJodHRwczovL2ZpbGVzMi5oZXlnZW4uYWkvYXZhdGFyL3YzLzNk%0D%0ANjA2ZDc2NTk4NTQ1NDFhMGRkOWVlM2E4MTUyOGVjXzU1MzgwL3ByZXZpZXdfdGFyZ2V0LndlYnAi%0D%0ALCJuZWVkUmVtb3ZlQmFja2dyb3VuZCI6ZmFsc2UsImtub3dsZWRnZUJhc2VJZCI6IjVmOGI4YmY0%0D%0AYjk1ODQzNzY5MzdiZTEyNjg3MjkyMmQ0IiwidXNlcm5hbWUiOiI5M2QwNWI3NzU4YjA0NDViOWIz%0D%0AOWEzNmUwNzAzY2M4ZCJ9&inIFrame=1",clientWidth=document.body.clientWidth,wrapDiv=document.createElement("div");wrapDiv.id="heygen-streaming-embed";const container=document.createElement("div");container.id="heygen-streaming-container";const stylesheet=document.createElement("style");stylesheet.innerHTML=`\n  #heygen-streaming-embed {\n    z-index: 9999;\n    position: fixed;\n    right: 40px;\n    bottom: 40px;\n    width: 200px;\n    height: 200px;\n    border-radius: 50%;\n    border: 2px solid #fff;\n    box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.12);\n    transition: all linear 0.1s;\n    overflow: hidden;\n\n    opacity: 0;\n    visibility: hidden;\n  }\n  #heygen-streaming-embed.show {\n    opacity: 1;\n    visibility: visible;\n  }\n  #heygen-streaming-embed.expand {\n    ${clientWidth<540?"height: 266px; width: 96%; left: 50%; transform: translateX(-50%);":"height: 366px; width: calc(366px * 16 / 9);"}\n    border: 0;\n    border-radius: 8px;\n  }\n  #heygen-streaming-container {\n    width: 100%;\n    height: 100%;\n  }\n  #heygen-streaming-container iframe {\n    width: 100%;\n    height: 100%;\n    border: 0;\n  }\n  `;const iframe=document.createElement("iframe");iframe.allowFullscreen=!1,iframe.title="Streaming Embed",iframe.role="dialog",iframe.allow="microphone",iframe.src=url;let visible=!1,initial=!1;window.addEventListener("message",(e=>{e.origin===host&&e.data&&e.data.type&&"streaming-embed"===e.data.type&&("init"===e.data.action?(initial=!0,wrapDiv.classList.toggle("show",initial)):"show"===e.data.action?(visible=!0,wrapDiv.classList.toggle("expand",visible)):"hide"===e.data.action&&(visible=!1,wrapDiv.classList.toggle("expand",visible)))})),container.appendChild(iframe),wrapDiv.appendChild(stylesheet),wrapDiv.appendChild(container),document.body.appendChild(wrapDiv)}(globalThis);</script>
-
-    <!-- THYNKWISE CHATBOT WIDGET -->
-    <!-- <script src="https://thynkbot.thynkwise.co.in/embed.js" data-bot-id="c11a6ab3-82a9-407e-a853-b2e456433768"></script> -->
+    <!-- HEYGEN STREAMING AVATAR WIDGET -->
+    <script>!function(window){const host="https://labs.heygen.com",url=host+"/guest/streaming-embed?share=eyJxdWFsaXR5IjoiaGlnaCIsImF2YXRhck5hbWUiOiJNYXJpYW5uZV9DaGFpcl9TaXR0aW5nX3B1%0D%0AYmxpYyIsInByZXZpZXdJbWciOiJodHRwczovL2ZpbGVzMi5oZXlnZW4uYWkvYXZhdGFyL3YzLzNk%0D%0ANjA2ZDc2NTk4NTQ1NDFhMGRkOWVlM2E4MTUyOGVjXzU1MzgwL3ByZXZpZXdfdGFyZ2V0LndlYnAi%0D%0ALCJuZWVkUmVtb3ZlQmFja2dyb3VuZCI6ZmFsc2UsImtub3dsZWRnZUJhc2VJZCI6IjVmOGI4YmY0%0D%0AYjk1ODQzNzY5MzdiZTEyNjg3MjkyMmQ0IiwidXNlcm5hbWUiOiI5M2QwNWI3NzU4YjA0NDViOWIz%0D%0AOWEzNmUwNzAzY2M4ZCJ9&inIFrame=1",clientWidth=document.body.clientWidth,wrapDiv=document.createElement("div");wrapDiv.id="heygen-streaming-embed";const container=document.createElement("div");container.id="heygen-streaming-container";const stylesheet=document.createElement("style");stylesheet.innerHTML=`\n  #heygen-streaming-embed {\n    z-index: 9999;\n    position: fixed;\n    left: 40px;\n    bottom: 40px;\n    width: 200px;\n    height: 200px;\n    border-radius: 50%;\n    border: 2px solid #fff;\n    box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.12);\n    transition: all linear 0.1s;\n    overflow: hidden;\n\n    opacity: 0;\n    visibility: hidden;\n  }\n  #heygen-streaming-embed.show {\n    opacity: 1;\n    visibility: visible;\n  }\n  #heygen-streaming-embed.expand {\n    ${clientWidth<540?"height: 266px; width: 96%; left: 50%; transform: translateX(-50%);":"height: 366px; width: calc(366px * 16 / 9);"}\n    border: 0;\n    border-radius: 8px;\n  }\n  #heygen-streaming-container {\n    width: 100%;\n    height: 100%;\n  }\n  #heygen-streaming-container iframe {\n    width: 100%;\n    height: 100%;\n    border: 0;\n  }\n  `;const iframe=document.createElement("iframe");iframe.allowFullscreen=!1,iframe.title="Streaming Embed",iframe.role="dialog",iframe.allow="microphone",iframe.src=url;let visible=!1,initial=!1;window.addEventListener("message",(e=>{e.origin===host&&e.data&&e.data.type&&"streaming-embed"===e.data.type&&("init"===e.data.action?(initial=!0,wrapDiv.classList.toggle("show",initial)):"show"===e.data.action?(visible=!0,wrapDiv.classList.toggle("expand",visible)):"hide"===e.data.action&&(visible=!1,wrapDiv.classList.toggle("expand",visible)))})),container.appendChild(iframe),wrapDiv.appendChild(stylesheet),wrapDiv.appendChild(container),document.body.appendChild(wrapDiv)}(globalThis);</script>
 
     <!-- INTERACTION SCRIPT -->
     <script>
-        /*// Function to ask a question
+        // Function to ask a question
         function askQuestion(element) {
             const questionText = element.querySelector('.question-text').textContent;
             
@@ -631,56 +596,50 @@
                 element.style.transform = '';
             }, 200);
             
-            // Try to open the chatbot and populate question
+            // Open/expand the HeyGen avatar
             openChat();
             
-            // Attempt to set the question in the chat input (if widget supports it)
-            setTimeout(() => {
-                const chatInput = document.querySelector('#thynkbot-input, .chat-input, input[type="text"]');
-                if (chatInput) {
-                    chatInput.value = questionText;
-                    chatInput.focus();
-                }
-            }, 500);
-            
+            // Log the question for reference
             console.log('Question clicked:', questionText);
+            
+            // Note: The actual question would be spoken to the avatar or typed into its interface
+            // The HeyGen avatar has its own interaction interface that will appear when expanded
         }
         
-        // Function to open the chat widget
+        // Function to open/expand the HeyGen avatar widget
         function openChat() {
-            // Try multiple methods to open the chat widget
+            // The HeyGen avatar widget automatically handles its own show/expand behavior
+            // When the page loads, it will appear as a circular avatar at bottom-left
+            // Clicking on it will expand it for interaction
             
-            // Method 1: Click on chat button if it exists
-            const chatButton = document.querySelector('#thynkbot-button, .chat-button, [data-bot-id]');
-            if (chatButton) {
-                chatButton.click();
-                return;
+            // Try to trigger avatar expansion via postMessage if needed
+            const heygenIframe = document.querySelector('#heygen-streaming-container iframe');
+            if (heygenIframe) {
+                // The HeyGen widget should already be visible and clickable
+                // This logs for debugging purposes
+                console.log('HeyGen avatar widget is embedded and ready');
             }
             
-            // Method 2: Show chat iframe if it exists
-            const chatIframe = document.querySelector('#thynkbot-iframe, .chat-iframe');
-            if (chatIframe) {
-                chatIframe.style.display = 'block';
-                return;
-            }
-            
-            // Method 3: Call global function if available
-            if (window.ThynkBot && typeof window.ThynkBot.open === 'function') {
-                window.ThynkBot.open();
-                return;
-            }
-            
-            console.log('Chat widget should open now');
+            // Scroll to bottom to ensure avatar is visible
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
         }
         
-        // Keyboard shortcut to open chat
+        // Keyboard shortcut to focus on avatar area
         document.addEventListener('keydown', function(e) {
-            // Press "/" or "Ctrl+K" (Windows) or "Cmd+K" (Mac) to open chat
+            // Press "/" or "Ctrl+K" (Windows) or "Cmd+K" (Mac) to scroll to avatar
             if (e.key === '/' || ((e.ctrlKey || e.metaKey) && e.key === 'k')) {
                 e.preventDefault();
                 openChat();
             }
-        });*/
+        });
+        
+        // Welcome message for console
+        console.log('%c🤖 ROMi AI Assistant Ready', 'color: #1a5f3a; font-size: 16px; font-weight: bold;');
+        console.log('%cHeyGen Avatar Widget embedded at bottom-left corner', 'color: #4a5a52; font-size: 12px;');
+        console.log('%cClick any question card or the avatar to interact', 'color: #4a5a52; font-size: 12px;');
     </script>
 </body>
 </html>
