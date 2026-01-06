@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meet Nayana | Natural Remedies AI Assistant</title>
+    <title>Nayana AI Assistant - Natural Remedies</title>
+    <meta name="description" content="Ask Nayana - Your intelligent AI assistant for Natural Remedies. Get instant answers about products, strategy, and more.">
     
-    <!-- Distinctive Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         :root {
             /* Natural Remedies Brand Colors */
             --primary-forest: #1a5f3a;
@@ -19,761 +26,659 @@
             --secondary-saffron: #d97917;
             --secondary-saffron-light: #f59e42;
             --accent-blue: #0369a1;
+            --accent-blue-light: #0891b2;
             
-            /* Neutrals */
+            /* Neutral Palette */
             --cream-bg: #faf8f5;
             --cream-light: #fdfcfa;
             --beige-warm: #f5f1ea;
+            --tan-light: #e8e3d9;
+            
+            /* Text Colors */
             --text-primary: #1f2d26;
             --text-secondary: #4a5a52;
+            --text-muted: #6b7b73;
             --white: #ffffff;
             
             /* Typography */
-            --font-display: 'Crimson Pro', serif;
-            --font-body: 'DM Sans', sans-serif;
+            --font-primary: 'DM Sans', system-ui, -apple-system, sans-serif;
+            --font-display: 'Crimson Pro', Georgia, serif;
             
-            /* Spacing */
-            --spacing-xs: 0.5rem;
-            --spacing-sm: 1rem;
-            --spacing-md: 1.5rem;
-            --spacing-lg: 2rem;
-            --spacing-xl: 3rem;
-            --spacing-2xl: 4rem;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            /* Compact Spacing */
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 0.75rem;
+            --space-lg: 1rem;
+            --space-xl: 1.5rem;
         }
         
         body {
-            font-family: var(--font-body);
-            background: var(--cream-bg);
+            font-family: var(--font-primary);
             color: var(--text-primary);
-            line-height: 1.6;
+            background: linear-gradient(135deg, var(--cream-bg) 0%, var(--beige-warm) 100%);
+            line-height: 1.4;
+            -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
         }
         
-        /* Botanical Background Pattern */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(26, 95, 58, 0.03) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(217, 121, 23, 0.03) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: 0;
-        }
-        
-        /* Decorative Leaf Elements */
-        .leaf-decoration {
-            position: fixed;
-            font-size: 120px;
-            opacity: 0.02;
-            pointer-events: none;
-            z-index: 0;
-            color: var(--primary-forest);
-        }
-        
-        .leaf-1 { top: 10%; left: 5%; transform: rotate(-20deg); }
-        .leaf-2 { top: 60%; right: 8%; transform: rotate(45deg); font-size: 100px; }
-        .leaf-3 { bottom: 15%; left: 10%; transform: rotate(-35deg); font-size: 90px; }
-        
-        /* Container */
+        /* ===== CONTAINER ===== */
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 2rem;
-            position: relative;
-            z-index: 1;
+            padding: 0 1.5rem;
         }
         
-        /* Header */
-        header {
-            padding: var(--spacing-xl) 0;
-            text-align: center;
-            position: relative;
-        }
-        
-        .logo-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: var(--spacing-md);
-        }
-        
-        .logo-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--primary-forest), var(--primary-forest-light));
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 38px;
-            box-shadow: 
-                0 10px 30px rgba(26, 95, 58, 0.2),
-                0 0 0 1px rgba(255,255,255,0.1) inset;
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
-        }
-        
-        .company-name {
-            font-family: var(--font-display);
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary-forest-dark);
-            letter-spacing: -0.02em;
-        }
-        
-        .hero-section {
-            max-width: 900px;
-            margin: 0 auto var(--spacing-2xl);
-        }
-        
-        .hero-title {
-            font-family: var(--font-display);
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: var(--primary-forest-dark);
-            margin-bottom: var(--spacing-md);
-            line-height: 1.2;
-            letter-spacing: -0.03em;
-            animation: fadeInUp 0.8s ease-out;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
-            margin-bottom: var(--spacing-sm);
-            font-weight: 400;
-            animation: fadeInUp 0.8s ease-out 0.2s both;
-        }
-        
-        .hero-description {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-            margin-bottom: var(--spacing-lg);
-            animation: fadeInUp 0.8s ease-out 0.4s both;
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Badge */
-        .ai-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: linear-gradient(135deg, var(--primary-forest), var(--primary-forest-light));
-            color: white;
-            padding: 0.6rem 1.5rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            box-shadow: 0 4px 12px rgba(26, 95, 58, 0.3);
-            animation: fadeInUp 0.8s ease-out 0.6s both;
-        }
-        
-        .ai-badge::before {
-            content: '✨';
-            font-size: 1.2em;
-        }
-        
-        /* Section Header */
-        .section-header {
-            text-align: center;
-            margin-bottom: var(--spacing-xl);
-            animation: fadeInUp 0.8s ease-out 0.8s both;
-        }
-        
-        .section-title {
-            font-family: var(--font-display);
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary-forest-dark);
-            margin-bottom: var(--spacing-sm);
-            letter-spacing: -0.02em;
-        }
-        
-        .section-description {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        /* Questions Grid */
-        .questions-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: var(--spacing-2xl);
-            animation: fadeInUp 0.8s ease-out 1s both;
-        }
-        
-        .question-card {
-            background: var(--white);
-            border-radius: 16px;
-            padding: 1.8rem;
-            border: 2px solid transparent;
-            box-shadow: 
-                0 2px 8px rgba(26, 95, 58, 0.06),
-                0 0 0 1px rgba(26, 95, 58, 0.05);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
+        /* ===== HEADER ===== */
+        .header {
+            background: linear-gradient(135deg, var(--primary-forest-dark) 0%, var(--primary-forest) 100%);
+            color: var(--white);
+            padding: 1.5rem 0 1rem;
+            box-shadow: 0 4px 12px rgba(26, 95, 58, 0.15);
             position: relative;
             overflow: hidden;
         }
         
-        .question-card::before {
+        .header::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary-forest), var(--secondary-saffron));
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            top: -50%;
+            right: -5%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(217, 121, 23, 0.12) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo-container {
+            flex-shrink: 0;
+        }
+        
+        .logo-img {
+            width: 80px;
+            height: auto;
+            filter: drop-shadow(0 2px 8px rgba(0,0,0,0.2));
+        }
+        
+        .header-text {
+            flex: 1;
+        }
+        
+        .company-name {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .tagline {
+            font-size: 0.875rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+        
+        /* ===== HERO SECTION ===== */
+        .hero {
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+        
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-forest);
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-title .highlight {
+            color: var(--secondary-saffron);
+            position: relative;
+        }
+        
+        .hero-subtitle {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 0.75rem;
+            line-height: 1.5;
+        }
+        
+        .ai-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-blue-light));
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            box-shadow: 0 4px 12px rgba(3, 105, 161, 0.25);
+        }
+        
+        /* ===== SECTION HEADER ===== */
+        .section-header {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--primary-forest);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .section-description {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* ===== QUESTIONS GRID - ULTRA COMPACT ===== */
+        .questions-section {
+            padding: 1rem 0 1.5rem;
+        }
+        
+        .questions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 0.75rem;
+        }
+        
+        .question-card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+            position: relative;
+            box-shadow: 0 2px 6px rgba(26, 95, 58, 0.08);
         }
         
         .question-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--primary-forest-light);
-            box-shadow: 
-                0 12px 30px rgba(26, 95, 58, 0.15),
-                0 0 0 1px var(--primary-forest-light);
-        }
-        
-        .question-card:hover::before {
-            transform: scaleX(1);
-        }
-        
-        .question-number {
-            display: inline-block;
-            width: 32px;
-            height: 32px;
-            background: linear-gradient(135deg, var(--primary-forest-light), var(--primary-forest));
-            color: white;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.85rem;
-            font-weight: 700;
-            margin-bottom: var(--spacing-sm);
-        }
-        
-        .question-text {
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            line-height: 1.5;
-            margin-bottom: var(--spacing-xs);
-        }
-        
-        .question-category {
-            display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--secondary-saffron);
-            background: rgba(217, 121, 23, 0.08);
-            padding: 0.3rem 0.8rem;
-            border-radius: 6px;
-            margin-top: var(--spacing-sm);
-        }
-        
-        .click-indicator {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            margin-top: var(--spacing-sm);
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            transform: translateY(-3px);
+            border-color: var(--primary-forest);
+            box-shadow: 0 6px 16px rgba(26, 95, 58, 0.15);
         }
         
         .question-card:hover .click-indicator {
             opacity: 1;
         }
         
-        .click-indicator::before {
-            content: '💬';
-        }
-        
-        /* Footer CTA */
-        .footer-cta {
-            background: linear-gradient(135deg, var(--primary-forest-dark), var(--primary-forest));
-            color: white;
-            padding: var(--spacing-2xl) var(--spacing-lg);
-            border-radius: 24px;
-            text-align: center;
-            margin-bottom: var(--spacing-2xl);
-            box-shadow: 0 20px 40px rgba(26, 95, 58, 0.25);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .footer-cta::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            animation: pulse 4s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.3; }
-            50% { transform: scale(1.1); opacity: 0.5; }
-        }
-        
-        .footer-cta-content {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .footer-cta h3 {
-            font-family: var(--font-display);
-            font-size: 2rem;
+        .question-number {
+            font-size: 0.75rem;
             font-weight: 700;
-            margin-bottom: var(--spacing-sm);
-            letter-spacing: -0.02em;
+            color: var(--secondary-saffron);
+            margin-bottom: 0.25rem;
+            letter-spacing: 0.05em;
         }
         
-        .footer-cta p {
-            font-size: 1.1rem;
-            opacity: 0.95;
-            margin-bottom: var(--spacing-lg);
+        .question-text {
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
         }
         
-        .chat-button {
+        .question-category {
+            display: inline-block;
+            font-size: 0.7rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Category Colors */
+        .category-product { background: rgba(26, 95, 58, 0.1); color: var(--primary-forest); }
+        .category-brand { background: rgba(217, 121, 23, 0.1); color: var(--secondary-saffron); }
+        .category-social { background: rgba(3, 105, 161, 0.1); color: var(--accent-blue); }
+        .category-campaign { background: rgba(90, 122, 104, 0.1); color: var(--primary-forest-light); }
+        .category-digital { background: rgba(217, 121, 23, 0.15); color: #b85f0a; }
+        .category-roi { background: rgba(3, 105, 161, 0.15); color: #075985; }
+        
+        .click-indicator {
+            position: absolute;
+            bottom: 0.5rem;
+            right: 0.75rem;
+            font-size: 0.7rem;
+            color: var(--primary-forest);
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-weight: 600;
+        }
+        
+        /* ===== FOOTER CTA ===== */
+        .footer-cta {
+            background: linear-gradient(135deg, var(--primary-forest) 0%, var(--primary-forest-dark) 100%);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+            margin-top: 1rem;
+        }
+        
+        .cta-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .cta-text {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-button {
             display: inline-flex;
             align-items: center;
-            gap: 0.8rem;
+            gap: 0.5rem;
             background: var(--secondary-saffron);
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 12px;
-            font-size: 1.1rem;
-            font-weight: 600;
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
             text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 16px rgba(217, 121, 23, 0.4);
-            border: 2px solid transparent;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(217, 121, 23, 0.3);
+            border: none;
+            cursor: pointer;
         }
         
-        .chat-button:hover {
+        .cta-button:hover {
             background: var(--secondary-saffron-light);
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(217, 121, 23, 0.5);
+            box-shadow: 0 6px 16px rgba(217, 121, 23, 0.4);
         }
         
-        .chat-button::after {
-            content: '→';
-            font-size: 1.3em;
-            transition: transform 0.3s ease;
-        }
-        
-        .chat-button:hover::after {
-            transform: translateX(4px);
-        }
-        
-        /* Footer */
-        footer {
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--text-primary);
+            color: var(--tan-light);
+            padding: 1rem 0;
             text-align: center;
-            padding: var(--spacing-xl) 0;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
+            font-size: 0.875rem;
         }
         
-        footer a {
-            color: var(--primary-forest);
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer a {
+            color: var(--secondary-saffron-light);
             text-decoration: none;
-            font-weight: 600;
+            transition: color 0.3s;
         }
         
-        footer a:hover {
+        .footer a:hover {
             color: var(--secondary-saffron);
         }
         
-        /* Responsive Design */
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
             }
             
-            .section-title {
-                font-size: 2rem;
+            .logo-img {
+                width: 70px;
+            }
+            
+            .company-name {
+                font-size: 1.25rem;
+            }
+            
+            .hero-title {
+                font-size: 1.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 0.9rem;
             }
             
             .questions-grid {
                 grid-template-columns: 1fr;
-                gap: 1rem;
+                gap: 0.75rem;
             }
             
             .question-card {
-                padding: 1.5rem;
+                padding: 0.75rem;
             }
             
-            .footer-cta {
-                padding: var(--spacing-xl) var(--spacing-md);
-            }
-            
-            .footer-cta h3 {
-                font-size: 1.5rem;
+            .footer-content {
+                flex-direction: column;
+                gap: 0.5rem;
             }
         }
         
-        /* Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
-        /* Loading Animation for Question Cards */
         .question-card {
-            animation: cardFadeIn 0.6s ease-out both;
+            animation: fadeIn 0.5s ease-out backwards;
         }
         
-        .question-card:nth-child(1) { animation-delay: 0.1s; }
-        .question-card:nth-child(2) { animation-delay: 0.15s; }
-        .question-card:nth-child(3) { animation-delay: 0.2s; }
-        .question-card:nth-child(4) { animation-delay: 0.25s; }
-        .question-card:nth-child(5) { animation-delay: 0.3s; }
-        .question-card:nth-child(6) { animation-delay: 0.35s; }
-        .question-card:nth-child(7) { animation-delay: 0.4s; }
-        .question-card:nth-child(8) { animation-delay: 0.45s; }
-        .question-card:nth-child(9) { animation-delay: 0.5s; }
-        .question-card:nth-child(10) { animation-delay: 0.55s; }
-        .question-card:nth-child(11) { animation-delay: 0.6s; }
-        .question-card:nth-child(12) { animation-delay: 0.65s; }
-        .question-card:nth-child(13) { animation-delay: 0.7s; }
-        .question-card:nth-child(14) { animation-delay: 0.75s; }
-        .question-card:nth-child(15) { animation-delay: 0.8s; }
-        .question-card:nth-child(16) { animation-delay: 0.85s; }
-        .question-card:nth-child(17) { animation-delay: 0.9s; }
-        .question-card:nth-child(18) { animation-delay: 0.95s; }
-        
-        @keyframes cardFadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+        .question-card:nth-child(1) { animation-delay: 0.05s; }
+        .question-card:nth-child(2) { animation-delay: 0.1s; }
+        .question-card:nth-child(3) { animation-delay: 0.15s; }
+        .question-card:nth-child(4) { animation-delay: 0.2s; }
+        .question-card:nth-child(5) { animation-delay: 0.25s; }
+        .question-card:nth-child(6) { animation-delay: 0.3s; }
+        .question-card:nth-child(7) { animation-delay: 0.35s; }
+        .question-card:nth-child(8) { animation-delay: 0.4s; }
+        .question-card:nth-child(9) { animation-delay: 0.45s; }
+        .question-card:nth-child(10) { animation-delay: 0.5s; }
+        .question-card:nth-child(11) { animation-delay: 0.55s; }
+        .question-card:nth-child(12) { animation-delay: 0.6s; }
+        .question-card:nth-child(13) { animation-delay: 0.65s; }
+        .question-card:nth-child(14) { animation-delay: 0.7s; }
+        .question-card:nth-child(15) { animation-delay: 0.75s; }
+        .question-card:nth-child(16) { animation-delay: 0.8s; }
+        .question-card:nth-child(17) { animation-delay: 0.85s; }
+        .question-card:nth-child(18) { animation-delay: 0.9s; }
     </style>
 </head>
 <body>
-    <!-- Decorative Leaf Elements -->
-    <div class="leaf-decoration leaf-1">🌿</div>
-    <div class="leaf-decoration leaf-2">🍃</div>
-    <div class="leaf-decoration leaf-3">🌱</div>
-    
-    <div class="container">
-        <!-- Header -->
-        <header>
-            <div class="logo-section">
-                <div class="logo-icon">🌿</div>
-                <h1 class="company-name">Natural Remedies</h1>
-            </div>
-            
-            <div class="hero-section">
-                <h2 class="hero-title">Meet Nayana — Your AI Assistant</h2>
-                <p class="hero-subtitle">Natural Remedies' Next-Generation Intelligence</p>
-                <p class="hero-description">
-                    Nayana is Dr. Divya's digital twin, powered by AI and loaded with comprehensive knowledge about Natural Remedies' products, marketing initiatives, and strategic direction. Ask her anything about our business—she's got the answers, 24/7.
-                </p>
-                <div class="ai-badge">Powered by Advanced AI</div>
-            </div>
-        </header>
-        
-        <!-- Questions Section -->
-        <section class="section-header">
-            <h3 class="section-title">Explore What Nayana Knows</h3>
-            <p class="section-description">
-                Click on any question below to ask Nayana, or type your own question in the chat widget. These are just starting points—feel free to dig deeper!
-            </p>
-        </section>
-        
-        <div class="questions-grid">
-            <!-- Product Strategy & Brand Leadership -->
-            <div class="question-card" onclick="askQuestion(this)">
-                <div class="question-number">1</div>
-                <div class="question-text">What are your plans for Doodhsagaar? How will Doodhsagaar grow?</div>
-                <span class="question-category">Product Strategy</span>
-                <div class="click-indicator">Click to ask Nayana</div>
-            </div>
-            
-            <div class="question-card" onclick="askQuestion(this)">
-                <div class="question-number">2</div>
-                <div class="question-text">Is Glucaboost a brand leader in the energy segment?</div>
-                <span class="question-category">Brand Position</span>
-                <div class="click-indicator">Click to ask Nayana</div>
-            </div>
-            
-            <div class="question-card" onclick="askQuestion(this)">
-                <div class="question-number">3</div>
-                <div class="question-text">How is Topicure able to stay as brand leader for so many years?</div>
-                <span class="question-category">Brand Leadership</span>
-                <div class="click-indicator">Click to ask Nayana</div>
-            </div>
-            
-            <!-- Leadership & Internal Communication -->
-            <div class="question-card" onclick="askQuestion(this)">
-                <div class="question-number">4</div>
-                <div class="question-text">How strong is leadership visibility across digital platforms?</div>
-                <span class="question-category">Leadership</span>
-                <div class="click-indicator">Click to ask Nayana</div>
-            </div>
-            
-            <div class="question-card" onclick="askQuestion(this)">
-                <div class="question-number">5</div>
-                <div class="question-text">How does Natural Remedies engage employees through internal communication?</div>
-                <span class="question-category">Internal Engagement</span>
-                <div class="click-indicator">Click to ask Nayana</div>
-            </div>
-            
-            <!-- Credibility & Recognition -->
-            <div class="question-card" onclick="askQuestion(this)">
-                <div class="question-number">6</div>
-                <div class="question-text">How did we build credibility for Natural Remedies?</div>
-                <span class="question-category">Brand Credibility</span>
-                <div class="click-indicator">Click to ask Nayana</div>
-            </div>
-            
-            <div class="question-card" onclick="askQuestion(this)">
-                <div class="question-number">7</div>
-                <div class="question-text">How active has Natural Remedies been in media and thought leadership?</div>
-                <span class="question-category">Thought Leadership</span>
-                <div class="click-indicator">Click to ask Nayana</div>
-            </div>
-            
-            <div class="question-card" onclick="askQuestion(this)">
-                <div class="question-number">8</div>
-                <div class="question-text">What industry recognition or awards did Natural Remedies receive recently?</div>
-                <span class="question-category">Industry Awards</span>
-                <div class="click-indicator">Click to ask Nayana</div>
-            </div>
-            
-            <!-- Digital Marketing Performance -->
-            <div class="question-card" onclick="askQuestion(this)">
-                <div class="question-number">9</div>
-                <div class="question-text">What impact did social media have this year?</div>
-                <span class="question-category">Social Media</span>
-                <div class="click-indicator">Click to ask Nayana</div>
-            </div>
-            
-            <div class="question-card" onclick="askQuestion(this)">
-                <div class="question-number">10</div>
-                <div class="question-text">How active has Natural Remedies been in content creation?</div>
-                <span class="question-category">Content Marketing</span>
-                <div class="click-indicator">Click to ask Nayana</div>
-            </div>
-            
-            <div class="question-card" onclick="askQuestion(this)">
-                <div class="question-number">11</div>
-                <div class="question-text">How many followers or fans do we have on LinkedIn?</div>
-                <span class="question-category">LinkedIn</span>
-                <div class="click-indicator">Click to ask Nayana</div>
-            </div>
-            
-            <div class="question-card" onclick="askQuestion(this)">
-                <div class="question-number">12</div>
-                <div class="question-text">How did digital marketing support global growth?</div>
-                <span class="question-category">Global Growth</span>
-                <div class="click-indicator">Click to ask Nayana</div>
-            </div>
-            
-            <div class="question-card" onclick="askQuestion(this)">
-                <div class="question-number">13</div>
-                <div class="question-text">How many campaigns did MarComm run this year?</div>
-                <span class="question-category">Campaign Volume</span>
-                <div class="click-indicator">Click to ask Nayana</div>
-            </div>
-            
-            <div class="question-card" onclick="askQuestion(this)">
-                <div class="question-number">14</div>
-                <div class="question-text">How did the website perform?</div>
-                <span class="question-category">Website Analytics</span>
-                <div class="click-indicator">Click to ask Nayana</div>
-            </div>
-            
-            <!-- Monogastric Marketing -->
-            <div class="question-card" onclick="askQuestion(this)">
-                <div class="question-number">15</div>
-                <div class="question-text">What were the key Monogastric marketing achievements this year?</div>
-                <span class="question-category">Monogastric</span>
-                <div class="click-indicator">Click to ask Nayana</div>
-            </div>
-            
-            <div class="question-card" onclick="askQuestion(this)">
-                <div class="question-number">16</div>
-                <div class="question-text">What business impact did the Phytocee campaign create?</div>
-                <span class="question-category">Campaign ROI</span>
-                <div class="click-indicator">Click to ask Nayana</div>
-            </div>
-            
-            <div class="question-card" onclick="askQuestion(this)">
-                <div class="question-number">17</div>
-                <div class="question-text">Which key industry events did marketing participate in?</div>
-                <span class="question-category">Events</span>
-                <div class="click-indicator">Click to ask Nayana</div>
-            </div>
-            
-            <div class="question-card" onclick="askQuestion(this)">
-                <div class="question-number">18</div>
-                <div class="question-text">What is the key message of the "Choline Reinvented Naturally" campaign for Kolin Plus?</div>
-                <span class="question-category">Campaign Messaging</span>
-                <div class="click-indicator">Click to ask Nayana</div>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJ3aGl0ZSIvPgo8IS0tIEJsdWUgcGhvbmUgY3VydmUgLS0+CjxwYXRoIGQ9Ik0yMCA0NUMyMCAzNSAyNSAyNSAzNSAyNUM0NSAyNSA1NSAzNSA1NSA0NUM1NSA1NSA0NSA2NSAzNSA2NSIgc3Ryb2tlPSIjMDA2NkNDIiBzdHJva2Utd2lkdGg9IjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPgo8IS0tIEJsdWUgZG90IC0tPgo8Y2lyY2xlIGN4PSI0OCIgY3k9IjMyIiByPSI2IiBmaWxsPSIjMDA2NkNDIi8+CjwhLS0gWWVsbG93IGhlYXJ0IC0tPgo8Y2lyY2xlIGN4PSI0NSIgY3k9IjUwIiByPSI1IiBmaWxsPSIjRkZDQzAwIi8+CjwhLS0gT3JhbmdlIGhlYXJ0IC0tPgo8Y2lyY2xlIGN4PSI1MyIgY3k9IjUyIiByPSI2IiBmaWxsPSIjRkY2NjAwIi8+CjwhLS0gR3JlZW4gc21pbGUgY3VydmUgLS0+CjxwYXRoIGQ9Ik01NSA2NUM2NSA2NSA3NSA2MCA4MCA1MEM4NSA0MCA4MCAzMCA3MCAzMCIgc3Ryb2tlPSIjNjY5OTMzIiBzdHJva2Utd2lkdGg9IjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPgo8IS0tIEdyZWVuIGRvdCAtLT4KPGNpcmNsZSBjeD0iNzAiIGN5PSI0MiIgcj0iNiIgZmlsbD0iIzY2OTkzMyIvPgo8IS0tIFRleHQgLS0+Cjx0ZXh0IHg9IjUwIiB5PSI5MCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjIwIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzY2OTkzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSI+bmF0dXJhbDwvdGV4dD4KPC9zdmc+" alt="Natural Remedies" class="logo-img" />
+                </div>
+                <div class="header-text">
+                    <h1 class="company-name">Natural Remedies</h1>
+                    <p class="tagline">Botanical Healthcare Excellence Since 1992</p>
+                </div>
             </div>
         </div>
-        
-        <!-- Footer CTA -->
-        <div class="footer-cta">
-            <div class="footer-cta-content">
-                <h3>Ready to Experience AI-Powered Intelligence?</h3>
-                <p>Ask Nayana anything about Natural Remedies' products, strategy, or performance. She's ready to answer.</p>
-                <a href="#" class="chat-button" onclick="openChat(); return false;">
-                    Start Conversation
-                </a>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <h2 class="hero-title">Meet <span class="highlight">Nayana</span> — Your AI Assistant</h2>
+            <p class="hero-subtitle">
+                Click any question below to start a conversation with Nayana, Natural Remedies' intelligent AI assistant trained on our products, strategy, and expertise.
+            </p>
+            <div class="ai-badge">
+                <span>✨</span>
+                <span>Powered by Advanced AI</span>
             </div>
         </div>
-        
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2026 Natural Remedies. Pioneering botanical healthcare with AI innovation.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.7;">
-                Powered by <a href="https://thynkwise.co.in" target="_blank">ThynkWise AI Platform</a>
-            </p>
-        </footer>
-    </div>
-    
-    <!-- Chatbot Widget -->
+    </section>
+
+    <!-- QUESTIONS SECTION -->
+    <section class="questions-section">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">Explore Popular Questions</h3>
+                <p class="section-description">Click any card to ask Nayana — instant, intelligent answers await</p>
+            </div>
+            
+            <div class="questions-grid">
+                <!-- Question 1 -->
+                <div class="question-card" onclick="askQuestion(this)">
+                    <div class="question-number">QUESTION 1</div>
+                    <div class="question-text">What are the future growth plans for Doodhsagaar?</div>
+                    <span class="question-category category-product">Product Strategy</span>
+                    <span class="click-indicator">Click to ask →</span>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question-card" onclick="askQuestion(this)">
+                    <div class="question-number">QUESTION 2</div>
+                    <div class="question-text">Why is Glucaboost #2 in the calcium market despite being in that position for long?</div>
+                    <span class="question-category category-product">Market Position</span>
+                    <span class="click-indicator">Click to ask →</span>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question-card" onclick="askQuestion(this)">
+                    <div class="question-number">QUESTION 3</div>
+                    <div class="question-text">How has Topicure managed to remain the category leader for such a long time?</div>
+                    <span class="question-category category-brand">Brand Leadership</span>
+                    <span class="click-indicator">Click to ask →</span>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question-card" onclick="askQuestion(this)">
+                    <div class="question-number">QUESTION 4</div>
+                    <div class="question-text">Why is the CEO not very visible on LinkedIn in terms of regular posts and thoughts?</div>
+                    <span class="question-category category-brand">Leadership</span>
+                    <span class="click-indicator">Click to ask →</span>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question-card" onclick="askQuestion(this)">
+                    <div class="question-number">QUESTION 5</div>
+                    <div class="question-text">How do we keep our employees internally engaged?</div>
+                    <span class="question-category category-brand">Culture</span>
+                    <span class="click-indicator">Click to ask →</span>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question-card" onclick="askQuestion(this)">
+                    <div class="question-number">QUESTION 6</div>
+                    <div class="question-text">How are we building credibility and brand awareness in the market?</div>
+                    <span class="question-category category-brand">Brand Strategy</span>
+                    <span class="click-indicator">Click to ask →</span>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question-card" onclick="askQuestion(this)">
+                    <div class="question-number">QUESTION 7</div>
+                    <div class="question-text">What's the visibility of Natural Remedies in the media landscape and in terms of thought leadership?</div>
+                    <span class="question-category category-brand">Media Presence</span>
+                    <span class="click-indicator">Click to ask →</span>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="question-card" onclick="askQuestion(this)">
+                    <div class="question-number">QUESTION 8</div>
+                    <div class="question-text">How many awards and recognitions have we won in the last couple of years?</div>
+                    <span class="question-category category-brand">Recognition</span>
+                    <span class="click-indicator">Click to ask →</span>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="question-card" onclick="askQuestion(this)">
+                    <div class="question-number">QUESTION 9</div>
+                    <div class="question-text">What's the visibility on social media and what kind of impact have we seen in the last couple of years?</div>
+                    <span class="question-category category-social">Social Media</span>
+                    <span class="click-indicator">Click to ask →</span>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="question-card" onclick="askQuestion(this)">
+                    <div class="question-number">QUESTION 10</div>
+                    <div class="question-text">How many pieces of content do we create in a year and what kind of impact do we see?</div>
+                    <span class="question-category category-social">Content Creation</span>
+                    <span class="click-indicator">Click to ask →</span>
+                </div>
+
+                <!-- Question 11 -->
+                <div class="question-card" onclick="askQuestion(this)">
+                    <div class="question-number">QUESTION 11</div>
+                    <div class="question-text">How many LinkedIn followers do we have across the globe?</div>
+                    <span class="question-category category-social">Social Reach</span>
+                    <span class="click-indicator">Click to ask →</span>
+                </div>
+
+                <!-- Question 12 -->
+                <div class="question-card" onclick="askQuestion(this)">
+                    <div class="question-number">QUESTION 12</div>
+                    <div class="question-text">With regards to digital marketing, what do we do in India versus globally?</div>
+                    <span class="question-category category-digital">Digital Strategy</span>
+                    <span class="click-indicator">Click to ask →</span>
+                </div>
+
+                <!-- Question 13 -->
+                <div class="question-card" onclick="askQuestion(this)">
+                    <div class="question-number">QUESTION 13</div>
+                    <div class="question-text">Why have we run 172 campaigns? Is that too many, and what's the impact?</div>
+                    <span class="question-category category-campaign">Campaign Volume</span>
+                    <span class="click-indicator">Click to ask →</span>
+                </div>
+
+                <!-- Question 14 -->
+                <div class="question-card" onclick="askQuestion(this)">
+                    <div class="question-number">QUESTION 14</div>
+                    <div class="question-text">What's the overall performance of our website in the last couple of years?</div>
+                    <span class="question-category category-digital">Web Analytics</span>
+                    <span class="click-indicator">Click to ask →</span>
+                </div>
+
+                <!-- Question 15 -->
+                <div class="question-card" onclick="askQuestion(this)">
+                    <div class="question-number">QUESTION 15</div>
+                    <div class="question-text">What has the marketing team done for monogastrics in the last couple of years?</div>
+                    <span class="question-category category-campaign">Segment Focus</span>
+                    <span class="click-indicator">Click to ask →</span>
+                </div>
+
+                <!-- Question 16 -->
+                <div class="question-card" onclick="askQuestion(this)">
+                    <div class="question-number">QUESTION 16</div>
+                    <div class="question-text">Have we quantified the business impact of the Phytocee campaign at a single venue?</div>
+                    <span class="question-category category-roi">Campaign ROI</span>
+                    <span class="click-indicator">Click to ask →</span>
+                </div>
+
+                <!-- Question 17 -->
+                <div class="question-card" onclick="askQuestion(this)">
+                    <div class="question-number">QUESTION 17</div>
+                    <div class="question-text">What kind of industry events have we done and what's the impact?</div>
+                    <span class="question-category category-campaign">Events</span>
+                    <span class="click-indicator">Click to ask →</span>
+                </div>
+
+                <!-- Question 18 -->
+                <div class="question-card" onclick="askQuestion(this)">
+                    <div class="question-number">QUESTION 18</div>
+                    <div class="question-text">What's the story behind "Choline Reinvented" for Kolin Plus and the impact?</div>
+                    <span class="question-category category-campaign">Campaign Story</span>
+                    <span class="click-indicator">Click to ask →</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER CTA -->
+    <section class="footer-cta">
+        <div class="container">
+            <h3 class="cta-title">Ready to Learn More?</h3>
+            <p class="cta-text">Ask Nayana anything about Natural Remedies</p>
+            <button class="cta-button" onclick="openChat()">
+                <span>💬</span>
+                <span>Start Chatting Now</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <span>&copy; 2026 Natural Remedies. All rights reserved.</span>
+                <span>•</span>
+                <span>Powered by <a href="https://thynkwise.co.in" target="_blank">ThynkWise AI</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- THYNKWISE CHATBOT WIDGET -->
     <script src="https://thynkbot.thynkwise.co.in/embed.js" data-bot-id="c11a6ab3-82a9-407e-a853-b2e456433768"></script>
-    
+
+    <!-- INTERACTION SCRIPT -->
     <script>
-        // Function to handle question card clicks
+        // Function to ask a question
         function askQuestion(element) {
             const questionText = element.querySelector('.question-text').textContent;
             
-            // Add visual feedback
+            // Visual feedback
             element.style.transform = 'scale(0.98)';
             setTimeout(() => {
                 element.style.transform = '';
             }, 200);
             
-            // Try to auto-populate the chat widget with the question
-            // This depends on the chat widget's API - adjust if needed
+            // Try to open the chatbot and populate question
+            openChat();
+            
+            // Attempt to set the question in the chat input (if widget supports it)
             setTimeout(() => {
-                try {
-                    // Attempt to find and populate the chat input
-                    const chatInput = document.querySelector('input[type="text"]') || 
-                                    document.querySelector('textarea') ||
-                                    document.querySelector('[contenteditable="true"]');
-                    
-                    if (chatInput) {
-                        chatInput.value = questionText;
-                        chatInput.textContent = questionText;
-                        
-                        // Trigger input event to ensure the widget recognizes the text
-                        const event = new Event('input', { bubbles: true });
-                        chatInput.dispatchEvent(event);
-                    }
-                } catch (e) {
-                    console.log('Chat widget interaction:', e);
+                const chatInput = document.querySelector('#thynkbot-input, .chat-input, input[type="text"]');
+                if (chatInput) {
+                    chatInput.value = questionText;
+                    chatInput.focus();
                 }
-                
-                // Open the chat widget
-                openChat();
-            }, 100);
+            }, 500);
+            
+            console.log('Question clicked:', questionText);
         }
         
-        // Function to open chat widget
+        // Function to open the chat widget
         function openChat() {
             // Try multiple methods to open the chat widget
-            try {
-                // Method 1: Look for chat button/trigger
-                const chatButton = document.querySelector('[class*="chat"]') || 
-                                 document.querySelector('[class*="bot"]') ||
-                                 document.querySelector('iframe').parentElement;
-                
-                if (chatButton && chatButton.click) {
-                    chatButton.click();
-                }
-                
-                // Method 2: If there's an iframe, try to make it visible
-                const iframe = document.querySelector('iframe[src*="thynkbot"]');
-                if (iframe) {
-                    iframe.style.display = 'block';
-                    iframe.style.visibility = 'visible';
-                }
-                
-                // Method 3: Trigger any available API method
-                if (window.ThynkBot && window.ThynkBot.open) {
-                    window.ThynkBot.open();
-                }
-            } catch (e) {
-                console.log('Opening chat:', e);
+            
+            // Method 1: Click on chat button if it exists
+            const chatButton = document.querySelector('#thynkbot-button, .chat-button, [data-bot-id]');
+            if (chatButton) {
+                chatButton.click();
+                return;
             }
+            
+            // Method 2: Show chat iframe if it exists
+            const chatIframe = document.querySelector('#thynkbot-iframe, .chat-iframe');
+            if (chatIframe) {
+                chatIframe.style.display = 'block';
+                return;
+            }
+            
+            // Method 3: Call global function if available
+            if (window.ThynkBot && typeof window.ThynkBot.open === 'function') {
+                window.ThynkBot.open();
+                return;
+            }
+            
+            console.log('Chat widget should open now');
         }
         
-        // Smooth scroll effect on page load
-        window.addEventListener('load', () => {
-            document.body.style.opacity = '0';
-            setTimeout(() => {
-                document.body.style.transition = 'opacity 0.5s ease';
-                document.body.style.opacity = '1';
-            }, 100);
-        });
-        
-        // Add hover sound effect (optional - can be removed if not desired)
-        document.querySelectorAll('.question-card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                // Could add subtle sound effect here if desired
-            });
-        });
-        
-        // Keyboard navigation support
-        document.addEventListener('keydown', (e) => {
-            if (e.key === '/' || (e.key === 'k' && (e.metaKey || e.ctrlKey))) {
+        // Keyboard shortcut to open chat
+        document.addEventListener('keydown', function(e) {
+            // Press "/" or "Ctrl+K" (Windows) or "Cmd+K" (Mac) to open chat
+            if (e.key === '/' || ((e.ctrlKey || e.metaKey) && e.key === 'k')) {
                 e.preventDefault();
                 openChat();
             }
         });
-        
-        // Log page view analytics (optional)
-        console.log('Nayana AI Assistant Page Loaded - Natural Remedies');
-        console.log('Questions available:', document.querySelectorAll('.question-card').length);
     </script>
 </body>
 </html>
